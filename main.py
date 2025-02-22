@@ -24,7 +24,7 @@ def agregar_estudiante(estudiantes):
         guardar_estudiantes(estudiantes)  # Guardar los cambios en el archivo
         print(f"Estudiante {nombre} agregado exitosamente.\n")
     except ValueError:
-        print("Error: Las calificaciones deben ser números.\n")
+        print("Error: Las calificaciones deben ser números separados por espacios.\n")
 
 # Función para mostrar la lista de estudiantes y sus promedios
 def ver_estudiantes(estudiantes):
@@ -79,6 +79,8 @@ def menu():
             seleccion = int(input("\nSeleccione una opción (1-4): "))
             if seleccion == 1:
                 agregar_estudiante(estudiantes)
+            elif seleccion >=5:
+                print("Opción no valida.")
             elif seleccion == 2:
                 ver_estudiantes(estudiantes)
             elif seleccion == 3:
